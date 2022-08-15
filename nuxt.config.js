@@ -60,7 +60,7 @@ export default {
     proxy: true
   },
     sitemap: {
-  hostname: 'https://mfa10.com',
+  hostname: 'https://www.supermfa.online',
  
     gzip: true,
      defaults: {
