@@ -1,0 +1,138 @@
+@media only screen and (max-width : 420px) {
+   #nav{
+    font-family: "Cairo", sans-serif !important;
+    font-size: 12px  !important;
+    -webkit-width: 100vw  !important;
+    -moz-width: 100vw   !important;
+    -ms-width: 100vw   !important;
+    -o-width: 100vw   !important;
+    width: 100%   !important;
+    overflow: visible   !important;
+    height: 90px   !important;
+    display: block   !important;
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 30%);
+    color: #deba92   !important;
+    font-size: 9px   !important;
+    font-weight: bold   !important;
+   }
+   #navs{
+    height: 30px   !important;
+    font-size: 9px   !important;
+    /* margin: auto; */
+    /* width: 70%   !important; */
+    text-align: center   !important;
+    /* padding: 10px; */
+   }
+   #navs li {
+       display: inline-block   !important;
+    height: 10px   !important;
+    margin: 2px   !important;
+   }
+   #navb{
+           /* width: 500px; */
+    height: 60px !important;
+    font-size: 12px !important;
+    /* text-align: right; */
+    width: 100% !important;
+    margin: auto !important;
+   }
+   #nav > #navb > li {
+    display: inline-block !important;
+    height: 20px !important;
+    margin: 6.5px !important;
+   }
+   .sliderviews {
+     width: auto !important; 
+    margin: auto  !important;
+    height: auto !important;
+    overflow: hidden !important;
+    margin: auto !important;
+        height: 280px  !important;
+}
+.donet {
+    text-align: center !important;
+    width: auto !important;
+    margin: auto !important;
+    background-color: white !important;
+    border-radius: 25px !important;
+   
+    height: auto !important;
+    line-height: 40px !important;
+    /* z-index: 9999; */
+    font-size: 13px !important;
+    padding: 11px !important;
+}
+.startman {
+    font-family: 'Cairo', sans-serif;
+    /* margin-top: 1px; */
+    background-color: transparent !important;
+    color: blac;
+    border: 1px solid #DEB792 !important;
+    width: 120px !important;
+    font-size: 14px !important;
+    transition: all .3s !important;
+    border-radius: 10px !important;
+    cursor: pointer !important;
+    font-size:12px !important;
+    height: 40px !important;
+}
+.startman h5 {
+    font-size: 1rem !important;
+}
+.content{
+    /*background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%) !important;*/
+    padding: 15px !important;
+}
+.content h2{
+    font-size: 20px !important;
+}
+.content marquee{
+    font-size: 11px !important;
+}
+ .dropdown {
+    margin-top: -2px !important;
+    width: 10px !important;
+}
+.dropdown > .btn {
+    margin: -15px 0 !important;line-height: -2px;
+}
+.dropdown    span {
+    color: rgb(222, 186, 146) !important;
+    font-weight: bold !important;
+    font-size: 12px !important;
+    line-height: -80px !important;
+    /* margin: -540px 0px !important;*/
+}
+
+
+
+/*Page ------------ pagesthgame  */
+/*Page ------------ pagesthgame  */
+
+.boxpage {
+    text-align: center !important;
+    padding: 3px !important;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2) !important;
+    width: 70% !important;
+    margin: 5px auto !important;
+    position: relative !important;
+    padding: 10px !important;
+}
+.body > .con {
+    /*height: calc(100vh - 90px);*/
+}
+
+/*Page ------------ PAGEPROFILE  */
+/*Page ------------ PAGEPROFILE  */
+.profile{
+    width: 96% !important;
+}
+.profcontentdata{
+    text-align: left !important;
+    /* margin: auto; !important */
+    margin: 15px auto !important;
+    font-size: 12px !important;
+    font-weight: bold !important;
+}
+    }
+    
