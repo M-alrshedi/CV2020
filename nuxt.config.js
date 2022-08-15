@@ -93,7 +93,7 @@ googleAnalytics: {
   
  
   proxy: {
-    '/api': 'http://localhost:80'
+    '/api': 'https://mfa10.com'
   },
 
   router:{
