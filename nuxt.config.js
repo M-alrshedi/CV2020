@@ -84,7 +84,7 @@ export default {
  UserAgent: '*',
  Disallow: '',
  Allow: '/',
- Sitemap:'https://mfa10.com/sitemap.xml'
+ Sitemap:'https://www.supermfa.online/sitemap.xml'
 },
   
 googleAnalytics: {
