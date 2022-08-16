@@ -99,7 +99,7 @@ else if(this.switchs == 1){
   
 
   },
- Create () {
+ created () {
 
  setInterval(this.testy , 20000)
   
