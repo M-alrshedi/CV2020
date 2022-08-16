@@ -12,7 +12,7 @@
     right: 51%;"  class=" ">
 
 
-     <Notification />
+    <!---- <Notification /> -->
 
       </li>
       <li>
@@ -61,19 +61,19 @@
 </template>
 
 <script>
-  import  loadingcom from "@/components/lazycom/loadingcom.vue"
-  import  errorcom  from "@/components/lazycom/errorcom.vue"
-const Notification = () => ({
-    component: import(/* webpackChunkName: "notification" */ "@/components/notification/notification.vue"),
-    loading : loadingcom,
-    error : errorcom,
+  //import  loadingcom from "@/components/lazycom/loadingcom.vue"
+//  import  errorcom  from "@/components/lazycom/errorcom.vue"
+//const Notification = () => ({
+//    component: import(/* webpackChunkName: "notification" */ "@/components/notification/notification.vue"),
+ //   loading : loadingcom,
+ //   error : errorcom,
     timeout:90000
-  });
+//  });
 
 export default {
   name: "namvebar",
   components:{
-    Notification
+   // Notification
   },
   data(){return{
 active_1:true,
