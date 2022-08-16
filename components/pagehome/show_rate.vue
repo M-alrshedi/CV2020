@@ -46,6 +46,8 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
 //props:["reviews"],
   name: "show_rate",
