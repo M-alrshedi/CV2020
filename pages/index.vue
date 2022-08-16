@@ -11,7 +11,7 @@
     <HelloWorld  />
 
     </div>
-    <show_rate :reviews="tes" />
+    <show_rate reviews="tes" />
   </div>
 </template>
 
@@ -22,13 +22,13 @@ import show_rate from "@/components/pagehome/show_rate.vue";
 
 export default {
 
-  async asyncData({ $axios }) {
-  const ip = await $axios.$get('https://mfa10.com/api/testref/mody.php')
- return{
-   tes:ip.datareivew
- }
+ // async asyncData({ $axios }) {
+ // const ip = await $axios.$get('https://mfa10.com/api/testref/mody.php')
+// return{
+  // tes:ip.datareivew
+ //}
 
-},
+//},
 
 data() {
   return {
