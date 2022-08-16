@@ -27,6 +27,12 @@
       </li>
 
 
+      <li style="width: 180px;" v-if="active_3" class="left lineleft">
+
+          <b-skeleton ></b-skeleton>
+
+
+      </li>
       <li v-if="active_1" class="left lineleft">
         <a href="">
 
@@ -61,6 +67,7 @@
 </template>
 
 <script>
+  import { BSkeleton } from 'bootstrap-vue'
   //import  loadingcom from "@/components/lazycom/loadingcom.vue"
 //  import  errorcom  from "@/components/lazycom/errorcom.vue"
 //const Notification = () => ({
@@ -74,10 +81,12 @@ export default {
   name: "namvebar",
   components:{
    // Notification
+   BSkeleton
   },
   data(){return{
-active_1:true,
+active_1:false,
 active_2:false,
+active_3:true,
 usernamed:'',
 
 
@@ -106,7 +115,8 @@ usernamed:'',
       if(localStorage.getItem("_datauser") !== null){
          this.usernamed =  JSON.parse(localStorage.getItem("_datauser")).username;;
 
-      this.active_1 =  false;
+     this.active_1 =  false;
+      this.active_3 =  false;
       this.active_2 =  true;
 
 
@@ -114,6 +124,7 @@ usernamed:'',
       }else{
 
 
+       this.active_3 =  false;
       this.active_1 =   true;
       this.active_2 = !true;
       this.$store.commit("for_login",{element:false});
@@ -124,7 +135,8 @@ usernamed:'',
    updated(){
 
     if (this.$store.getters.dataes.element === true){
-      this.active_1 = ! true;
+       this.active_1 = ! true;
+      this.active_3 = ! true;
       this.active_2 =  true;
       this.usernamed=JSON.parse(localStorage.getItem("_datauser")).username;
     }
