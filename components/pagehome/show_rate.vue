@@ -47,7 +47,7 @@
 
 <script>
 export default {
-props:["reviews"],
+//props:["reviews"],
   name: "show_rate",
 
   data(){
@@ -55,6 +55,7 @@ props:["reviews"],
       loaded:false,
       paidFor:false,
       switchs:0,
+      reviews:[]
       
     }
   },
@@ -98,10 +99,23 @@ else if(this.switchs == 1){
   
 
   },
-  mounted () {
+ Create () {
 
-  setInterval(this.testy , 20000)
+ setInterval(this.testy , 20000)
+  
+  axios.get("/api/testref/mody.php")
+  .then(res => {
+    console.log(res.data)
+    this.reviews = res.data.datareivew
+    //  [App.vue specific] When App.vue is finish loading finish the progress bar
+  })
+  .catch(err => {
+    console.error(err);
 
+    //  [App.vue specific] When App.vue is finish loading finish the progress bar
+
+
+  })
 
   },
 
