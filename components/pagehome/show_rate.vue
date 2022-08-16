@@ -2,8 +2,31 @@
   <div>
     <div class="page2content">
   <div class="sliderviews">
+<div v-if="!loaddatas" style="width: 100%; margin:auto;"      >
 
-   <div style="width: 100%; margin:auto;"    v-for="(review,index) in reviews" :key="index" class="rev" :style="review.showviews"  >
+    <div  style="padding: 25px;text-align: center; margin: auto; width: 90px; height: 90px;" class="imgreviews"><b-skeleton  width="90" height="90" type="avatar"></b-skeleton></div> <p></p>
+    <br>
+    <div style="width: 180px;margin: auto;" class="commentreviews"><b-skeleton></b-skeleton></p> </div>
+    <div style="margin:auto; text-align:center;" class="byreviewscomment">
+
+<ul>
+       <li  style="display: inline-block; font-weight: lighter;font-size: 0.7rem;width: 100px;margin: auto;"><b-skeleton></b-skeleton> </li>
+
+        <li style="display: inline-block; margin:0 2px;font-weight: lighter;font-size: 0.7rem;">  : بواسطة</li>
+
+
+
+     </ul>
+
+
+    </div>
+
+
+        <div  style="background-color: transparent;  margin:auto;"><b-skeleton></b-skeleton></div>
+
+        </div>
+<!-- ****************************************************** -->
+   <div  v-if="loaddatas" style="width: 100%; margin:auto;"    v-for="(review,index) in reviews" :key="index" class="rev" :style="review.showviews"  >
 
     <div  style="padding: 25px;" class="imgreviews"><img style="border-radius: 50px;" src="~/assets/imger/person.jpg" width="90" height="90" alt=""></div> <p></p>
     <div class="commentreviews"><p style="font-size:20px;" v-text="review.commentreviews"></p> </div>
@@ -13,8 +36,8 @@
        <li  v-text="review.byreviewscomment" style="display: inline-block; font-weight: lighter;font-size: 0.7rem;"><p style="font-size:13px;" v-text="review.commentreviews"></p>  </li>
 
         <li style="display: inline-block; margin:0 2px;font-weight: lighter;font-size: 0.7rem;">  : بواسطة</li>
-
-
+        
+        
 
      </ul>
 
@@ -47,16 +70,21 @@
 
 <script>
 import axios from "axios";
+  import { BSkeleton } from 'bootstrap-vue'
 
 export default {
 //props:["reviews"],
   name: "show_rate",
-
+  components:{
+ 
+   BSkeleton
+  },
   data(){
     return{
       loaded:false,
       paidFor:false,
       switchs:0,
+      loaddatas:false,
       reviews:[]
       
     }
@@ -111,11 +139,12 @@ else if(this.switchs == 1){
     this.reviews = res.data.datareivew
     
     setInterval(this.testy , 20000)
+      this.loaddatas = true
     //  [App.vue specific] When App.vue is finish loading finish the progress bar
   })
   .catch(err => {
     console.error(err);
-
+    this.loaddatas = false
     //  [App.vue specific] When App.vue is finish loading finish the progress bar
 
 
@@ -134,6 +163,11 @@ else if(this.switchs == 1){
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped >
+.b-skeleton-avatar {
+    width: 6rem !important;
+    height: 6rem !important;
+    border-radius: 50%;
+}
 .hello{
   width:100%;
 }
