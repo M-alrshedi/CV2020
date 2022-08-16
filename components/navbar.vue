@@ -67,7 +67,7 @@
 //    component: import(/* webpackChunkName: "notification" */ "@/components/notification/notification.vue"),
  //   loading : loadingcom,
  //   error : errorcom,
-    timeout:90000
+  //  timeout:90000
 //  });
 
 export default {
