@@ -101,14 +101,16 @@ else if(this.switchs == 1){
   
 
   },
- created () {
+ mounted  () {
 
- setInterval(this.testy , 20000)
+ 
   
   axios.get("/api/testref/mody.php")
   .then(res => {
     console.log(res.data)
     this.reviews = res.data.datareivew
+    
+    setInterval(this.testy , 20000)
     //  [App.vue specific] When App.vue is finish loading finish the progress bar
   })
   .catch(err => {
