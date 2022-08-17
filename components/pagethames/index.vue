@@ -62,6 +62,7 @@
 export default {
     name:"PageThames",
         // parent
+        scrollToTop: true,
   head:{
       title: 'أجمل الثيمات',
     separator: '-',
@@ -188,19 +189,6 @@ width: 100%;;
 
 }
 
-.list-enter,
-.list-leave-to {
-  visibility: hidden;
-  height: 0;
-  margin: 0;
-  padding: 0;
-  opacity: 0;
-}
-
-.list-enter-active,
-.list-leave-active {
-  transition: all 0.5s;
-}
 .boxpage{
     text-align: center;
     padding: 3px;

@@ -252,6 +252,7 @@
 import Qs  from  "qs/dist/qs.js";
 import axios from "axios";
 export default {
+  middleware:'loignmiddware',
   head: {
 style: [
       { type: 'text/css', innerHTML:' #nav{display:none !important; } #navb{display:none !important;} @media print{ .btn-info{ display:none;}}'},

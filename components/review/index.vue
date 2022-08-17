@@ -10,7 +10,7 @@
 
        <div @click="closedreview" style="position: absolute; top: 10px; right: 25px; font-weight: bold;cursor: pointer;">X</div>
             <div v-if="show" >
-            <h6 for="text"> ادخل تعليق ( ليس اجباري ) </h6>
+            <h6 for="text"> ادخل تعليق ( اختياري ) </h6>
             <textarea dir="rtl" v-model="comment" style="width:80%;" name="" id="" cols="4" rows="4" ></textarea>
             <br>
             <br>
@@ -38,7 +38,7 @@ import axios from "axios";
 import Qs  from  "qs/dist/qs.js";
 export default {
     name:"review",
-   
+   middleware:'loignmiddware',
 
     data(){
         return{

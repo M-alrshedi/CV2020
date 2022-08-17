@@ -3,7 +3,7 @@
     <ul id="navs">
       <li><a href="#">افضل التصاميم لدينا ❤</a></li>
       <li><a href="#">بشكل مجاني لك ❤</a></li>
-      <li class="right"><a href="#"> لعربية | English</a></li>
+      <li class="right"><a href="#"> لعربية | إصدار تجريبي </a></li>
     </ul>
             <h1 style="display:none;">{{this.$store.state.for_login + "//" + this.$store.getters.dataes.element}}</h1>
 
@@ -149,6 +149,8 @@ usernamed:'',
        this.active_1 =   true;
       this.active_2 = !true;
       localStorage.removeItem("_datauser");
+      this.$cookies.remove('_datauser') 
+
       /// this.$store.commit("for_login",{element:false});
       // this.$router.push({ name: "Home" }); // -> /user
 

@@ -12,17 +12,17 @@
                                 <li><a href="#">Standard dummy text</a></li>
                                 <li><a href="#">Type specimen book</a></li>
                             </ul>
-                        </div>
+                        </div> 
                     </div>- END COL -->
                     <div class="col-md-4 col-sm-4 col-xs-12">
                         <div class="single_footer single_footer_address">
                             <h4>الصحفات</h4>
                             <ul>
-                                <li><a href="javascript:void(0)">الملف الشخصي</a></li>
-                                <li><a href="javascript:void(0)">الثيمات</a></li>
+                                <li><a href="javascript:void(0)"> <nuxt-link to="/"> الرئيسية</nuxt-link></a></li>
+                                <li><a href="javascript:void(0)"> <nuxt-link to="/pagethames"> الثيمات</nuxt-link></a></li>
                                 <li><a href="javascript:void(0)">الخصوصية </a></li>
-                                <li><a href="javascript:void(0)">السياسية</a></li>
-                                <li><a href="javascript:void(0)">اتصل بنا</a></li>
+                                <li><a href="javascript:void(0)">السياسة</a></li>
+                                <li><a href="https://twitter.com/MohammadFaycel">اتصل بنا</a></li>
                             </ul>
                         </div>
                     </div><!--- END COL -->
@@ -39,7 +39,7 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-12 col-sm-12 col-xs-12">
-                        <p class="copyright">Copyright © 2020 <a href="javascript:void(0)">SUPER_M7MD</a>.</p>
+                        <p class="copyright">Copyright © 2020 <a href="https://twitter.com/MohammadFaycel">SUPER_M7MD</a>.</p>
                     </div><!--- END COL -->
                 </div><!--- END ROW -->
             </div><!--- END CONTAINER -->

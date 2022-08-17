@@ -35,6 +35,9 @@ data() {
 
   }
 },
+mounted() {
+  
+},
 
    head: {
 
@@ -42,7 +45,7 @@ data() {
     separator: '-',
     complement: 'جاهزة لك',
 
-  //omited
+  
 
   meta: [
            { charset: 'utf-8' },

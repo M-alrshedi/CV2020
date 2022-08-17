@@ -606,7 +606,7 @@ import {  BIconArrowUp, BIconArrowDown,BIconPlusCircle } from 'bootstrap-vue';
 export default {
     name:"datacv",
     components:{BIconArrowUp,BIconArrowDown,BIconPlusCircle},
-
+middleware:'loignmiddware',
 data(){
   return{
   selected:1,toggleDataCV:7,
@@ -907,11 +907,8 @@ methods:{
 },
 
 
- mounted () {
-    //  [App.vue specific] When App.vue is finish loading finish the progress bar
-    //this.$Progress.finish()
-  },
-  created () {
+ 
+  mounted () {
     //  [App.vue specific] When App.vue is first loaded start the progress bar
 
 
@@ -920,7 +917,7 @@ methods:{
       }
          if(this.$route.query.SUPSHOWS_THA1100){
 
-             alert("راح امشي معك خطوة بخطوة :   ممتاز جدا أدخل جميع بياناتك الان ")
+             alert("الآن أدخل جيمع بياناتك  ** وبعد ماتخلص روح لصفحة الثيمات واختر الثيم المناسب لك **")
 
 
     }

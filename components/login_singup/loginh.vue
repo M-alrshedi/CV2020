@@ -101,9 +101,7 @@ mounted () {
 
     }
      if (this.$route.query.SUPSHOWS_THA1100){
-        alert("راح امشي معك خطوة بخطوة : قم بتسجيل الدخول ان كنت لا تملك حساب سجل معنا")
-
-    }
+      alert("سجل دخول واذا ماعندك حساب سوي تسجيل")    }
   },
 
 
@@ -123,6 +121,10 @@ mounted () {
 thisa.$store.commit("for_login",{element:true});
 
        localStorage.setItem ("_datauser", JSON.stringify(res.data.users_data));
+        this.$cookies.set('_datauser',  JSON.stringify(res.data.users_data), {
+    path: '/',
+    maxAge: 60*30
+  })
       this.$bvToast.toast(res.data.msg , {
           title: 'system',
           variant: res.data.msg_error,

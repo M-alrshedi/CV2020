@@ -367,7 +367,7 @@ export default {
       BIconDownload,
       review
     },
-
+middleware:'loignmiddware',
 head(){
   return{
       style: [

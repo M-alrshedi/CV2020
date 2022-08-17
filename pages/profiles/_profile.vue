@@ -67,15 +67,18 @@
     </div>
 </template>
 <script>
-
+import { BIconShieldLockFill ,BIconTriangleFill,BIconPersonFill,BIconCalendarFill  } from 'bootstrap-vue'
 export default {
     name:"profile",
+    components:{
+ BIconShieldLockFill ,BIconTriangleFill,BIconPersonFill,BIconCalendarFill
+    },
 
 data(){
    return{
        par:this.$route.params.profile,
      datauser:{
-                 username:"-",
+                 username:this.$route.params.profile,
                 email:"-",
              iduser:"-",
               date:"-"
@@ -85,19 +88,20 @@ data(){
  },
 
 
-  mounted() {
-       if (localStorage.getItem('_datauser')) {
+  created() {
+    const cookieRes = this.$cookies.get('_datauser')
+       if (cookieRes) {
       try {
-        this.datauser.username=JSON.parse(localStorage.getItem("_datauser")).username
-    this.datauser.email=JSON.parse(localStorage.getItem("_datauser")).email
-    this.datauser.iduser=JSON.parse(localStorage.getItem("_datauser")).iduser
-    this.datauser.date=JSON.parse(localStorage.getItem("_datauser")).date
+    this.datauser.username= this.$store.getters['statelogin/getstateuser'].username
+    this.datauser.email=this.$store.getters['statelogin/getstateuser'].email
+    this.datauser.iduser=this.$store.getters['statelogin/getstateuser'].iduser
+    this.datauser.date=this.$store.getters['statelogin/getstateuser'].date
 
       } catch(e) {
         console.log(e)
       }
     }else{
-        alert("Dfsg")
+    
     }
     
   },
