@@ -50,7 +50,8 @@ export default {
     '@nuxtjs/google-analytics',
     ['@nuxtjs/google-adsense', {
       id: 'ca-pub-1856358644420211'
-    }]
+    }],
+    ['cookie-universal-nuxt', {  parseJSON: true }],
 
 
   ],
@@ -171,6 +172,8 @@ googleAnalytics: {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
+    postcss: null, 
+
        extend(config, ctx) {},
     babel: {
              compact: true
